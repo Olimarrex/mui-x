@@ -310,7 +310,7 @@ This property works like the `renderCell` property, which is rendered while cell
 
 ```tsx
 function CustomEditComponent(props: GridRenderEditCellParams) {
-  return <input type="text" value={params.value} onValueChange={...}>;
+  return <input type="text" value={params.value} onChange={...} />;
 }
 
 const columns: GridColDef[] = [
@@ -345,7 +345,7 @@ function CustomEditComponent(props: GridRenderEditCellParams) {
     apiRef.current.setEditCellValue({ id, field, value: newValue });
   };
 
-  return <input type="text" value={value} onValueChange={handleValueChange}>;
+  return <input type="text" value={value} onChange={handleValueChange} />;
 }
 ```
 
@@ -387,7 +387,7 @@ Modify the edit component to enable this feature:
 +    setValue(valueProp);
 +  }, [valueProp]);
 +
-   return <input type="text" value={value} onChange={handleChange}>;
+   return <input type="text" value={value} onChange={handleChange} />;
 }
 ```
 
